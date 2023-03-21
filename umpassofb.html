@@ -2,31 +2,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<script>
-window.onload = function () {
-    var links = document.getElementsByTagName("a");
-    for (var i = 0, n = links.length; i < n; i++) {
-        var href = links[i].href.trim() +
-        (links[i].href.indexOf("?") > 0 ? '&' : '?') +
-        document.location.search.replace('?', '').toString();
-        links[i].href = href;
-    }
-}
-</script>
+
 	
 	
 	
-	<script>
-		const urlParams = new URLSearchParams(window.location.search);
-		const scrParam = urlParams.get('src');
-    if(scrParam){
-		const proximoBtn = document.getElementById('botaoproximo');
-		proximoBtn.href = 'pvfb.html?scr=' + scrParam;
-    } else{
-		const proximoBtn = document.getElementById('botaoproximo');
-		proximoBtn.href = 'pvfb.html';
-    }
-	</script>
+	
 	
 	
 <!-- Google Tag Manager -->
@@ -587,6 +567,19 @@ destinam-se a expressar a nossa opini&atilde;o sobre os resultados potenciais qu
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
+	
+	<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const scrParam = urlParams.get('src');
+    if(scrParam){
+	    const proximoBtn = document.getElementsByClassName('smartplayer-call-action-transfer-utm');
+	    proximoBtn.href += '?scr=' + scrParam;
+    }
+</script>
+	
+	
+	
+	
 </body>
 	<script type="text/javascript" src="/arquivos/tracker.js"></script>
 <link rel="stylesheet" href="/arquivos/942865.css" type="text/css" media="all">
