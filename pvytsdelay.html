@@ -396,7 +396,16 @@
         </div>
         <!--- THE END NOTIFICAÇÃO  --->
         <!--- THE END CÓDIGOS  --->
-
+        <script>
+          const urlParams = new URLSearchParams(window.location.search);
+          const scrParam = urlParams.get('src');
+          if(scrParam){
+            const proximoBtn = document.getElementsByClassName('smartplayer-call-action-transfer-utm');
+              for(let i = 0; i < proximoBtn.length; i++) {
+               proximoBtn.href += '?scr=' + scrParam;
+              }
+          }
+      </script>
     </body>
 
 </html>
