@@ -397,20 +397,21 @@
         <!--- THE END NOTIFICAÇÃO  --->
         <!--- THE END CÓDIGOS  --->
     </body>
-    <script>
-      document.addEventListener("click", getsrc);
-      function getsrc(){
-        const urlParams = new URLSearchParams(window.location.search);
-        const scrParam = urlParams.get('src');
-        if(scrParam){
-          const proximoBtn = document.getElementsByClassName('smartplayer-call-action-transfer-utm');
-            console.log(proximoBtn)
-            for(let i = 0; i < proximoBtn.length; i++) {
-            proximoBtn.href += '?scr=' + scrParam;
-            }
+  <script>
+  document.addEventListener("click", getsrc);
+  function getsrc(){
+    const urlParams = new URLSearchParams(window.location.search);
+    const scrParam = urlParams.get('src');
+    if(scrParam){
+      const proximoBtn = document.getElementsByClassName('smartplayer-call-action-transfer-utm');
+      for(let i = 0; i < proximoBtn.length; i++) {
+        if (proximoBtn[i].href.indexOf('scr=') === -1) {
+          proximoBtn[i].href += (proximoBtn[i].href.indexOf('?') === -1 ? '?' : '&') + 'scr=' + scrParam;
         }
       }
-  </script>
+    }
+  }
+</script>
 
 </html>
 
