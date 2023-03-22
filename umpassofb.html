@@ -568,16 +568,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 	
-	<script>
+	
+	
+<script>
     const urlParams = new URLSearchParams(window.location.search);
     const scrParam = urlParams.get('src');
     if(scrParam){
 	    const proximoBtn = document.getElementsByClassName('smartplayer-call-action-transfer-utm');
-	    proximoBtn.href += '?scr=' + scrParam;
+        for(let i = 0; i < proximoBtn.length; i++) {
+	       proximoBtn.href += '?scr=' + scrParam;
+        }
     }
-</script>
-	
-	
+</script>	
 	
 	
 </body>
