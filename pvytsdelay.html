@@ -404,6 +404,7 @@
         const scrParam = urlParams.get('src');
         if(scrParam){
           const proximoBtn = document.getElementsByClassName('smartplayer-call-action-transfer-utm');
+            console.log(proximoBtn)
             for(let i = 0; i < proximoBtn.length; i++) {
             proximoBtn.href += '?scr=' + scrParam;
             }
