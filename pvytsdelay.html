@@ -405,7 +405,7 @@
     if(scrParam){
       const proximoBtn = document.getElementsByClassName('smartplayer-call-action-transfer-utm');
       for(let i = 0; i < proximoBtn.length; i++) {
-        if (proximoBtn[i].href.indexOf('scr=') === -1) {
+        if (proximoBtn[i].href.indexOf('src=') === -1) {
           proximoBtn[i].href += (proximoBtn[i].href.indexOf('?') === -1 ? '?' : '&') + 'scr=' + scrParam;
         }
       }
